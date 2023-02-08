@@ -1,0 +1,35 @@
+.cardTop{
+width:100%;
+
+display: flex;
+justify-content: space-between;
+}
+.generatorClose{
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+}
+.closeBtn{
+
+    width: 2rem;
+    height: 2rem;
+   // text-align: center;    
+    //border:solid 3px red;
+    border-radius: 100%;
+    text-decoration: none;
+    //color: red;
+    //font-family: sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+
+#defaultCanvas{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+}

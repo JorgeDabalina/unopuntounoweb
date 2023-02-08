@@ -1,0 +1,63 @@
+                @use '../variables' as *;
+                * {
+                    font-family: 'Work Sans', sans-serif;
+                }
+                
+                a {
+                    color: $gray-800;
+                }
+                
+                a:hover {
+                    background-color: $gray-100;
+                }
+                
+                a:visited {
+                    color: $gray-800;
+                    ;
+                }
+                
+                .header {
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    color: $gray-800;
+                    line-height: 1.8rem;
+                    display: inline;
+                }
+                
+                .subheader {
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    line-height: 1.4rem;
+                    color: $gray-800;
+                }
+                
+                .socialmedia {
+                    margin-top: 0.5rem;
+                    font-size: 1.1rem;
+                }
+                
+                .socialmedia a {
+                    margin-right: 0.5rem;
+                }
+                
+                .copy {
+                    color: $gray-400;
+                }
+                
+                .btn-type {
+                    font-weight: 400;
+                    color: $gray-800;
+                }
+                
+                .btn-type :hover {
+                    color: $black;
+                }
+                
+                .btn-type p {
+                    display: inline;
+                    font-size: 1.2rem;
+                }
+                
+                .btn-type i {
+                    margin-right: 10px;
+                }

@@ -1,0 +1,81 @@
+@use 'reset.scss';
+@use 'variables.scss' as *;
+@use 'components/typography.scss';
+@use 'components/_closeButton.scss';
+@use 'components/_slider.scss';
+
+
+.container {
+    background-color: #fff;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.card{
+    padding: 20px;
+    max-width: 375px;
+}
+
+.btn {
+    margin-top: 1rem;
+    border: 0.16rem solid $gray-400;
+    padding: 15px 0px;
+    width: 100%;
+    border-radius: $veryrounded;
+    background-color: $white;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    align-items: center;
+}
+
+.logo {
+    grid-column: 1 / 5;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 6rem;
+}
+
+.profile-text {
+    grid-column: 6 / 17;
+}
+
+@media (min-width: $breakpoint-Phone){
+    .container {
+        background-color: $gray-100 ;
+
+
+
+    
+        }
+
+        .card {
+            background: $white;
+            width: 100%;
+            height: 80vh;
+           // border: 0.16rem solid $gray-400;
+            border-radius: $rounded;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            
+            overflow: hidden;
+        }
+
+
+}
+
+@media (min-width: $breakpoint-Tablet){
+
+.container {
+    background-color:$gray-100;
+
+    }
+
+
+  
+}
