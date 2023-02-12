@@ -56,20 +56,20 @@ function setup() {
 
     //Panel de control (QuickSettings.js)
     settings = QuickSettings.create(10, 10, "Ajustes")
-        .addText("Title", "Moire 1", refresh)
+        .addText("Título", "Moire 1", refresh)
         .addButton("Aleatorio", randomize) // refresh
-        .addButton("Download svg", downloadSVG) // download button
-        .addButton("Download png", downloadPNG) // download button
+        .addButton("Descargar .svg", downloadSVG) // download button
+        .addButton("Descargar .png", downloadPNG) // download button
 
-    panel1 = QuickSettings.create(10, 250, "Pattern")
-        .addRange("Grid", gridMin, gridMax, 10, 1, refresh)
-        .addRange("Stroke", strokeMin, strokeMax, 1, 1, refresh)
+    panel1 = QuickSettings.create(10, 250, "Patrón")
+        .addRange("Rejilla", gridMin, gridMax, 10, 1, refresh)
+        .addRange("Grosor", strokeMin, strokeMax, 1, 1, refresh)
         
-    panel2 = QuickSettings.create(10, 450, "Transform")
-        .addNumber("Offset x", offsetXMin, offsetXMax, 0, 0.1, refresh)
-        .addNumber("Offset y", offsetYMin, offsetYMax, 0, 0.1, refresh)
-        .addNumber("Rotation", rotationMin, rotationMax, 1.1, 0.001, refresh)
-        .addNumber("Scale", scaleMin, scaleMax, 1, 0.01, refresh)
+    panel2 = QuickSettings.create(10, 450, "Transformar")
+        .addNumber("Offset eje X", offsetXMin, offsetXMax, 0, 0.1, refresh)
+        .addNumber("Offset eje Y", offsetYMin, offsetYMax, 0, 0.1, refresh)
+        .addNumber("Rotación", rotationMin, rotationMax, 1.1, 0.001, refresh)
+        .addNumber("Escala", scaleMin, scaleMax, 1, 0.01, refresh)
 
         
 
@@ -82,15 +82,15 @@ function draw() {
     clear();
     background(255);
 
-    gridSize = panel1.getValue("Grid");
-    strokeW = panel1.getValue("Stroke");
+    gridSize = panel1.getValue("Rejilla");
+    strokeW = panel1.getValue("Grosor");
 
-    title = settings.getValue("Title");
+    title = settings.getValue("Título");
 
-    offsetX = panel2.getValue("Offset x");
-    offsetY = panel2.getValue("Offset y");
-    layerRotation = panel2.getValue("Rotation");
-    layerScale = panel2.getValue("Scale");
+    offsetX = panel2.getValue("Offset eje X");
+    offsetY = panel2.getValue("Offset eje Y");
+    layerRotation = panel2.getValue("Rotación");
+    layerScale = panel2.getValue("Escala");
 
 
     translate(s / 2, s / 2);
@@ -173,16 +173,16 @@ function refresh() {
 function randomize(){
 
     var myRandomGrid = int(random(gridMin,gridMax));
-    panel1.setValue("Grid", myRandomGrid)
+    panel1.setValue("Rejilla", myRandomGrid)
     var myRandomStroke = int(random(strokeMin,strokeMax));
-    panel1.setValue("Stroke", myRandomStroke);
+    panel1.setValue("Grosor", myRandomStroke);
     var myRandomOffsetX = int(random(offsetXMin*100, offsetXMax*100))/100;
-    panel2.setValue("Offset x", myRandomOffsetX);
+    panel2.setValue("Offset eje X", myRandomOffsetX);
     var myRandomOffsetY = int(random(offsetYMin*100,offsetYMax*100))/100;
-    panel2.setValue("Offset y", myRandomOffsetY);
+    panel2.setValue("Offset eje Y", myRandomOffsetY);
     var myRandomRotation = int(random(rotationMin*100,rotationMax*100))/100;
-    panel2.setValue("Rotation", myRandomRotation);
+    panel2.setValue("Rotación", myRandomRotation);
     var myRandomScale = int(random(scaleMin*100 ,scaleMax*100))/100;
-    panel2.setValue("Scale", myRandomScale);
+    panel2.setValue("Escala", myRandomScale);
 
 }

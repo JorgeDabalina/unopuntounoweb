@@ -46,6 +46,12 @@
     grid-column: 6 / 17;
 }
 
+.copy {
+    padding-left: 5%;
+}
+
+
+
 @media (min-width: $breakpoint-Phone){
     .container {
         background-color: $gray-100 ;
@@ -65,8 +71,10 @@
             
             overflow: hidden;
         }
-
-
+        .copy {
+            padding-left: 5%;
+        }
+        
 }
 
 @media (min-width: $breakpoint-Tablet){
@@ -76,6 +84,7 @@
 
     }
 
-
-  
+    .copy {
+        padding-left: 5%;
+    }
 }
