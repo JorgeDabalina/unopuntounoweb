@@ -47,7 +47,10 @@
 }
 
 .copy {
-    padding-left: 5%;
+    font-size: 12px;
+    margin: -4%;
+  
+
 }
 
 
@@ -71,10 +74,7 @@
             
             overflow: hidden;
         }
-        .copy {
-            padding-left: 5%;
-        }
-        
+       
 }
 
 @media (min-width: $breakpoint-Tablet){
@@ -84,7 +84,4 @@
 
     }
 
-    .copy {
-        padding-left: 5%;
-    }
 }

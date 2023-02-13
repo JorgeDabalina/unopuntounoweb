@@ -62,7 +62,7 @@ function setup() {
         .addButton("Descargar .png", downloadPNG) // download button
 
     panel1 = QuickSettings.create(10, 250, "Patrón")
-        .addRange("Rejilla", gridMin, gridMax, 10, 1, refresh)
+        .addRange("Densidad", gridMin, gridMax, 10, 1, refresh)
         .addRange("Grosor", strokeMin, strokeMax, 1, 1, refresh)
         
     panel2 = QuickSettings.create(10, 450, "Transformar")
@@ -82,7 +82,7 @@ function draw() {
     clear();
     background(255);
 
-    gridSize = panel1.getValue("Rejilla");
+    gridSize = panel1.getValue("Densidad");
     strokeW = panel1.getValue("Grosor");
 
     title = settings.getValue("Título");
@@ -173,7 +173,7 @@ function refresh() {
 function randomize(){
 
     var myRandomGrid = int(random(gridMin,gridMax));
-    panel1.setValue("Rejilla", myRandomGrid)
+    panel1.setValue("Densidad", myRandomGrid)
     var myRandomStroke = int(random(strokeMin,strokeMax));
     panel1.setValue("Grosor", myRandomStroke);
     var myRandomOffsetX = int(random(offsetXMin*100, offsetXMax*100))/100;

@@ -61,7 +61,7 @@ function setup() {
         .addButton("Descargar .png", downloadPNG) // download button
 
     panel1 = QuickSettings.create(10, 250, "Patrón")
-        .addRange("Rejilla", gridMin, gridMax, 10, 1, refresh)
+        .addRange("Densidad", gridMin, gridMax, 10, 1, refresh)
         .addRange("Hueco", gapMin, gapMax, 0, 1, refresh)
         .addRange("Grosor", strokeMin, strokeMax, 1, 1, refresh)
         
@@ -71,6 +71,7 @@ function setup() {
         .addNumber("Rotación", rotationMin, rotationMax, 1.1, 0.001, refresh)
         .addNumber("Escala", scaleMin, scaleMax, 1, 0.01, refresh)
 
+       
         
 
     //panel.saveInLocalStorage("panel");
@@ -82,7 +83,7 @@ function draw() {
     clear();
     background(255);
 
-    gridSize = panel1.getValue("Rejilla");
+    gridSize = panel1.getValue("Densidad");
     gap = panel1.getValue("Hueco");
     strokeW = panel1.getValue("Grosor");
 
@@ -196,7 +197,7 @@ function refresh() {
 function randomize(){
 
     var myRandomGrid = int(random(gridMin,gridMax));
-    panel1.setValue("Rejilla", myRandomGrid);
+    panel1.setValue("Densidad", myRandomGrid);
     var myRandomGap = int(random(gapMin,gapMax));
     panel1.setValue("Hueco", myRandomGap);
     var myRandomStroke = int(random(strokeMin,strokeMax));
