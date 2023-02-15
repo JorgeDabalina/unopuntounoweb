@@ -1,6 +1,14 @@
                 @use '../variables' as *;
                 * {
-                    font-family: 'Work Sans', sans-serif;
+                   font-family: 'Work Sans', sans-serif  !important;
+                }
+
+                i{
+                    font-style: italic;
+                }
+
+                b {
+                    font-weight: 500;
                 }
                 
                 a {

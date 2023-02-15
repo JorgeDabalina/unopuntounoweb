@@ -77,6 +77,29 @@ function setup() {
     //panel.saveInLocalStorage("panel");
     //settings.saveInLocalStorage("settings");
 
+    settings.setDraggable(true);
+    panel1.setDraggable(true);
+    panel2.setDraggable(true);
+
+
+   
+
+    function reposition(x) {
+        if (x.matches) { // If media query matches
+            settings.setPosition(20, 600);
+            panel1.setPosition(20, 840);
+            panel2.setPosition(20, 1045);
+        } else {
+            settings.setPosition(10, 10);
+            panel1.setPosition(10, 250);
+            panel2.setPosition(10, 450);
+        }
+      }
+      
+      var x = window.matchMedia("(max-width: 700px)")
+      reposition(x) // Call listener function at run time
+      x.addListener(reposition) // Attach listener function on state changes
+
 }
 
 function draw() {

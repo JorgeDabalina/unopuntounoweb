@@ -143,7 +143,15 @@ a:visited {
 }
 
 * {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: 500;
 }
 
 a {
@@ -219,18 +227,21 @@ a:visited {
 }
 
 .closeBtn {
-  width: 2rem;
-  height: 2rem;
   border-radius: 100%;
-  text-decoration: none;
   display: flex;
+  text-align: center;
   justify-content: center;
-  align-items: center;
+  padding: 0.25rem;
+}
+
+.closeBtn img {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #defaultCanvas {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
 }
 
 * {
@@ -330,9 +341,11 @@ a:visited {
   display: grid;
   height: 100vh;
   place-items: center;
+  min-height: 750px;
 }
 
 .card {
+  min-height: 650px;
   padding: 20px;
   max-width: 375px;
 }
@@ -369,6 +382,24 @@ a:visited {
 .copy {
   font-size: 12px;
   margin: -4%;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+.textpeq {
+  font-size: 13.5px;
+}
+
+.imglogos {
+  height: 40px;
+  width: 250px;
+}
+
+.imglogosoriginal {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 @media (min-width: 576px) {
